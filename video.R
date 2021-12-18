@@ -1,3 +1,11 @@
+library(readr)
+library(tidyverse)
+library(gganimate)
+library(transformr)
+library(gifski)
+
+evoo2 <- read_csv("evoo2.csv")
+
 vid = evoo2 %>% 
   select(!'...1') %>%
   mutate(time = rep(1:48, each = 99),
